@@ -18,6 +18,22 @@ To access the Service API tier and view the records from the backend tier, pleas
 
 Please note that the actual URL for the Service API will depend on your deployment and configuration.
 
+## Other URL for yaml files
+docker file:
+https://github.com/arjunkumar7/nagp-api-arjun-kumar/blob/main/Dockerfile
+api config map:
+https://github.com/arjunkumar7/nagp-api-arjun-kumar/blob/main/api-configmap.yaml
+api deployment:
+https://github.com/arjunkumar7/nagp-api-arjun-kumar/blob/main/api-deployment.yaml
+api secret:
+https://github.com/arjunkumar7/nagp-api-arjun-kumar/blob/main/api-secret.yaml
+api service:
+https://github.com/arjunkumar7/nagp-api-arjun-kumar/blob/main/api-service.yaml
+mysql deployment:
+https://github.com/arjunkumar7/nagp-api-arjun-kumar/blob/main/mysql-deployment.yaml
+mysql service:
+https://github.com/arjunkumar7/nagp-api-arjun-kumar/blob/main/mysql-service.yaml
+
 ## Getting Started
 
 To get started with this project, follow the steps below:
