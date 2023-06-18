@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: nagp-api
+  template:
+    metadata:
+      labels:
+        app: nagp-api
+    spec:
+      containers:
+        - name: nagp-api
+          image: gcr.io/nagp2023arjunkumar/nagp-api:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: database-config
+                  key: DATABASE_URL
+            - name: DATABASE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: database-secret
+                  key: DATABASE_USERNAME
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: database-secret
+                  key: DATABASE_PASSWORD
+     
